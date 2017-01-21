@@ -17,7 +17,7 @@ if($_POST['token'] == $slack_token){
 	curl_setopt($ch, CURLOPT_POSTFIELDS,
 	    "access_token=$particle_access_token&args=r4,HIGH");
 	curl_setopt($ch, CURLOPT_URL, 
-		"https://api.particle.io/v1/devices/$particle_device_id/relay");
+		"https://api.particle.io/v1/devices/$particle_device_id/$particle_device_function");
 	
 	// Server says?!
 	$server_output = curl_exec($ch);
